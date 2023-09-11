@@ -3,7 +3,17 @@ package org.tw.devbootcamp;
 public class Rectangle {
 
 
-    public Double area(Double length, Double width) {
+    private final Double length;
+
+    private final Double width;
+
+    public Rectangle(Double length, Double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+
+    public Double area() {
         if(null == length || null == width){
             return null;
         }

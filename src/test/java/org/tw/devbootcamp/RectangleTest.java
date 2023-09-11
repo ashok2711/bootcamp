@@ -10,15 +10,19 @@ public class RectangleTest {
 
     @Test
     void shouldReturnAreaOfRectangleWithNullLengthAndWidth(){
-        Rectangle rectangle = new Rectangle();
-        Double result = rectangle.area(null, null);
+        Rectangle rectangle = new Rectangle(null, null);
+        Double result = rectangle.area();
         assertNull(result);
     }
 
     @Test
     void shouldReturnAreaOfRectangleWithValidLengthAndWidth(){
-        Rectangle rectangle = new Rectangle();
-        Double result = rectangle.area(10.0, 20.0);
+        final double length = 10.0;
+        final double width = 20.0;
+        Rectangle rectangle = new Rectangle(length, width);
+        Double result = rectangle.area();
         assertEquals(200.0, result);
     }
+
+
 }
