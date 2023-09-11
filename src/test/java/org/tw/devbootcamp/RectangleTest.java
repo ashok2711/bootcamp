@@ -1,15 +1,15 @@
 package org.tw.devbootcamp;
 
 import org.junit.jupiter.api.Test;
+import org.tw.devbootcamp.exceptions.NegativeInputException;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class RectangleTest {
 
     @Test
-    void shouldReturnAreaOfRectangleWithNullLengthAndWidth(){
+    void shouldReturnNullWithNullLengthAndWidthWhenAreaCalled(){
         Rectangle rectangle = new Rectangle(null, null);
         Double result = rectangle.area();
         assertNull(result);
@@ -25,7 +25,7 @@ public class RectangleTest {
     }
 
     @Test
-    void shouldReturnPerimeterOfRectangleWithNullLengthAndWidth(){
+    void shouldReturnNullWithNullLengthAndWidthWhenPerimeterCalled(){
         Rectangle rectangle = new Rectangle(null, null);
         Double result = rectangle.perimeter();
         assertNull(result);
@@ -40,5 +40,12 @@ public class RectangleTest {
         assertEquals(60.0, result);
     }
 
+    @Test
+    void shouldThrowExceptionWhenNegativeInputsInPerimeter(){
+        final double length = -10.0;
+        final double width = -20.0;
+        Rectangle rectangle = new Rectangle(length, width);
+        assertThrows(NegativeInputException.class, () -> rectangle.perimeter());
+    }
 
 }
