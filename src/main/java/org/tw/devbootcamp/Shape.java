@@ -1,2 +1,6 @@
-package org.tw.devbootcamp;public interface Shape {
+package org.tw.devbootcamp;
+
+public interface Shape {
+    Double area();
+    Double perimeter();
 }
