@@ -19,4 +19,11 @@ public class Rectangle {
         }
         return length * width;
     }
+
+    public Double perimeter() {
+        if(null == length || null == width){
+            return null;
+        }
+        return (length + width) * 2;
+    }
 }

@@ -24,5 +24,21 @@ public class RectangleTest {
         assertEquals(200.0, result);
     }
 
+    @Test
+    void shouldReturnPerimeterOfRectangleWithNullLengthAndWidth(){
+        Rectangle rectangle = new Rectangle(null, null);
+        Double result = rectangle.perimeter();
+        assertNull(result);
+    }
+
+    @Test
+    void shouldReturnPerimeterOfRectangleWithValidLengthAndWidth(){
+        final double length = 10.0;
+        final double width = 20.0;
+        Rectangle rectangle = new Rectangle(length, width);
+        Double result = rectangle.perimeter();
+        assertEquals(60.0, result);
+    }
+
 
 }
