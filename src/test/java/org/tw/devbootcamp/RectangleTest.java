@@ -17,7 +17,7 @@ public class RectangleTest {
     void shouldReturnAreaOfRectangleWithValidLengthAndWidth(){
         final double length = 10.0;
         final double width = 20.0;
-        Rectangle rectangle = new Rectangle(length, width);
+        Shape rectangle = new Rectangle(length, width);
         Double result = rectangle.area();
         assertEquals(200.0, result);
     }
@@ -33,7 +33,7 @@ public class RectangleTest {
     void shouldReturnPerimeterOfRectangleWithValidLengthAndWidth(){
         final double length = 10.0;
         final double width = 20.0;
-        Rectangle rectangle = new Rectangle(length, width);
+        Shape rectangle = new Rectangle(length, width);
         Double result = rectangle.perimeter();
         assertEquals(60.0, result);
     }

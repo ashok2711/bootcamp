@@ -15,7 +15,7 @@ public class SquareTest {
     @Test
     void shouldReturnAreaOfSquareWithValidSide(){
         final double side = 10.0;
-        Square square = new Square(side);
+        Shape square = new Square(side);
         Double result = square.area();
         assertEquals(100.0, result);
     }
@@ -31,7 +31,7 @@ public class SquareTest {
     void shouldReturnPerimeterOfSquareWithValidSide(){
 
         final double side = 10.0;
-        Square square = new Square(side);
+        Shape square = new Square(side);
         Double result = square.perimeter();
         assertEquals(40.0, result);
     }
