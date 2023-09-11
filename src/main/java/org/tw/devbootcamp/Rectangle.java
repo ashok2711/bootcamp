@@ -1,5 +1,7 @@
 package org.tw.devbootcamp;
 
+import org.tw.devbootcamp.exceptions.NegativeInputException;
+
 public class Rectangle {
 
 
@@ -20,9 +22,12 @@ public class Rectangle {
         return length * width;
     }
 
-    public Double perimeter() {
+    public Double perimeter() throws NegativeInputException {
         if(null == length || null == width){
             return null;
+        }
+        if( length<0.0 ||  width<0.0){
+            throw new NegativeInputException();
         }
         return (length + width) * 2;
     }

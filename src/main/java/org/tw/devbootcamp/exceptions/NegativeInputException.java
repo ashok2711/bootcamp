@@ -1,4 +1,4 @@
 package org.tw.devbootcamp.exceptions;
 
-public class NegativeInputException extends Exception{
+public class NegativeInputException extends RuntimeException{
 }
